@@ -89,6 +89,9 @@ services:
     expose:
       - "29400/tcp"
     restart: always
+    volumes:
+      - perfectworld-dbhomewdb-volume:/home/dbhomewdb
+      - perfectworld-backupwdb-volume:/home/backupwdb
     environment:
       LOGSERVICE_SERVER_UDP_PORT: 11100
       LOGSERVICE_SERVER_TCP_PORT: 11101
@@ -252,7 +255,9 @@ services:
 
 volumes:
   perfectworld-mysql-volume:
-
+  perfectworld-dbhomewdb-volume:
+  perfectworld-backupwdb-volume:
+ 
 networks:
   infrastructure:
     driver: bridge
