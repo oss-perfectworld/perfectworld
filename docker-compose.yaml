@@ -15,6 +15,7 @@ services:
       MYSQL_DB: pw
       MYSQL_USER: root
       MYSQL_PASSWORD: root
+      TZ: Asia/Jakarta
     image: ossperfectworld/perfect-world-authd:latest
     networks:
       infrastructure:
@@ -36,6 +37,7 @@ services:
       MYSQL_DATABASE: pw
       MYSQL_USER: unused
       MYSQL_PASSWORD: unused
+      TZ: Asia/Jakarta
   perfectworld-gacd:
     container_name: perfectworld-gacd
     depends_on:
@@ -51,6 +53,7 @@ services:
       GACD_SERVER_ADDRESS: 0.0.0.0
       GACD_ANTICHEAT_SERVER_PORT: 29702
       GACD_CONTROL_SERVER_PORT: 29712
+      TZ: Asia/Jakarta
     image: ossperfectworld/perfect-world-gacd:latest
     networks:
       infrastructure:
@@ -78,6 +81,7 @@ services:
       GLINKD_DELIVERY_SERVER_5_PORT: 29305
       GLINKD_DELIVERY_SERVER_6_PORT: 29306
       GLINKD_DELIVERY_SERVER_7_PORT: 29307
+      TZ: Asia/Jakarta
     image: ossperfectworld/perfect-world-gamed:latest
     networks:
       infrastructure:
@@ -95,6 +99,7 @@ services:
       LOGSERVICE_SERVER_ADDRESS: 172.30.1.2
       GAMEDBD_SERVER_ADDRESS: 0.0.0.0
       GAMEDBD_SERVER_PORT: 29400
+      TZ: Asia/Jakarta
     image: ossperfectworld/perfect-world-gamedbd:latest
     networks:
       infrastructure:
@@ -124,6 +129,7 @@ services:
       GDELIVERYD_SERVER_ADDRESS: 0.0.0.0
       GDELIVERYD_PROVIDER_SERVER_PORT: 29300
       GDELIVERYD_SERVER_PORT: 29100
+      TZ: Asia/Jakarta
     image: ossperfectworld/perfect-world-gdeliveryd:latest
     networks:
       infrastructure:
@@ -147,6 +153,7 @@ services:
       GAMEDBD_SERVER_PORT: 29400
       UNIQUENAMED_SERVER_ADDRESS: 172.30.1.3
       UNIQUENAMED_SERVER_PORT: 29401
+      TZ: Asia/Jakarta
     image: ossperfectworld/perfect-world-gfactiond:latest
     networks:
       infrastructure:
@@ -196,6 +203,7 @@ services:
       GLINKD_DELIVERY_SERVER_5_PORT: 29305
       GLINKD_DELIVERY_SERVER_6_PORT: 29306
       GLINKD_DELIVERY_SERVER_7_PORT: 29307
+      TZ: Asia/Jakarta
     image: ossperfectworld/perfect-world-glinkd:latest
     networks:
       infrastructure:
@@ -212,6 +220,7 @@ services:
       LOGSERVICE_SERVER_UDP_PORT: 11100
       LOGSERVICE_SERVER_TCP_PORT: 11101
       LOGSERVICE_SERVER_ADDRESS: 0.0.0.0
+      TZ: Asia/Jakarta
     image: ossperfectworld/perfect-world-logservice:latest
     networks:
       infrastructure:
@@ -229,6 +238,7 @@ services:
       LOGSERVICE_SERVER_ADDRESS: 172.30.1.2
       UNIQUENAMED_SERVER_ADDRESS: 0.0.0.0
       UNIQUENAMED_SERVER_PORT: 29401
+      TZ: Asia/Jakarta
     image: ossperfectworld/perfect-world-uniquenamed:latest
     networks:
       infrastructure:
@@ -245,6 +255,7 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: root
       USER_GOLD: 1000000
+      TZ: Asia/Jakarta
     image: ossperfectworld/perfect-world-website-register:latest
     networks:
       infrastructure:
